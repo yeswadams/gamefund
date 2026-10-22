@@ -1,9 +1,10 @@
 {
   "name": "@gamefund/api",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "uvicorn main:app --reload",
-    "lint": "ruff check .",
-    "test": "pytest"
+    "dev": "./.venv/bin/python main.py",
+    "lint": "./.venv/bin/ruff check .",
+    "test": "./.venv/bin/pytest"
   }
 }
