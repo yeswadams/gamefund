@@ -9,15 +9,15 @@ name: GameFund Monorepo CI Pipeline
 on:
   push:
     branches: [main, staging, dev]
-    pull_request: 
-      branches: [main, staging, dev]
+  pull_request: 
+    branches: [main, staging, dev]
 
-  jobs:
-    quality-assurance:
-      name: Lint, Test & Verify Monorepo
-      runs-on: ubuntu-latest
+jobs:
+  quality-assurance:
+    name: Lint, Test & Verify Monorepo
+    runs-on: ubuntu-latest
 
-    steps:
+    steps: #  Proper alignment under the job scope
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
@@ -26,6 +26,8 @@ on:
 
       - name: Install pnpm
         uses: pnpm/action-setup@v3
+        with:
+          version: 9
 
       - name: Setup Node.js Environment
         uses: actions/setup-node@v4
@@ -33,11 +35,11 @@ on:
           node-version: 22
           cache: 'pnpm'
 
-      - name: Setup Python Environment (Fast API)
+      - name: Setup Python Environment (FastAPI)
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: pip
+          cache: 'pip'
 
       - name: Install Global Python Tooling
         run: |
