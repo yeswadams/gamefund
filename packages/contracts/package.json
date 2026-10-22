@@ -1,0 +1,9 @@
+{
+  "name": "@gamefund/contracts",
+  "private": true,
+  "scripts": {
+    "compile": "forge build",
+    "deploy:local": "forge script script/Deploy.s.sol --rpc-url http://127.0.0.1:8545 --broadcast && ts-node --skip-project ../../scripts/sync-contracts.ts",
+    "test": "forge test"
+  }
+}
