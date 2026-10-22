@@ -1,0 +1,12 @@
+{
+  "name": "@gamefund/scripts",
+  "private": true,
+  "scripts": {
+    "dev": "ts-node-dev src/index.ts",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@gamefund/contracts": "workspace:*"
+  }
+}

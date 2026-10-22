@@ -1,0 +1,24 @@
+{
+  "$schema": "https://turbo.build",
+  "tasks": {
+    "compile": {
+      "dependsOn": ["^compile"],
+      "outputs": ["artifacts/**", "cache/**", "typechain-types/**"]
+    },
+    "build": {
+      "dependsOn": ["^build", "compile"],
+      "outputs": ["dist/**", ".next/**", "out/**"]
+    },
+    "test": {
+      "dependsOn": ["compile"],
+      "outputs": []
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "outputs": []
+    }
+  }
+}

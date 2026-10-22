@@ -1,0 +1,29 @@
+{
+  "name": "gamefund",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A platform where GameFi studios finance game development by connecting them with early supporters through transparent funding milestones, playable demos, and meaningful launch rewards.",
+  "main": "index.js",
+  "scripts": {
+    "compile": "turbo compile",
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "test": "turbo test",
+    "lint": "turbo lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.14.0",
+      "onFail": "download"
+    }
+  },
+  "packageManager": "pnpm@12.14.0",
+  "type": "module",
+  "devDependencies": {
+    "turbo": "^2.11.10"
+  }
+}

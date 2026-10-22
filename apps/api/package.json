@@ -1,0 +1,9 @@
+{
+  "name": "@gamefund/api",
+  "private": true,
+  "scripts": {
+    "dev": "uvicorn main:app --reload",
+    "lint": "ruff check .",
+    "test": "pytest"
+  }
+}
