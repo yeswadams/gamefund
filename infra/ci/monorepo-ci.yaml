@@ -47,6 +47,11 @@ on:
       - name: Install Monorepo Dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: nightly
+
       # Enforce style checks
       - name: Enforce Code Style & Lint
         run: pnpm turbo lint
